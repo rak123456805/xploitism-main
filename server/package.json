@@ -1,6 +1,9 @@
 {
   "name": "xploitsim-server",
   "version": "1.0.0",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "postinstall": "npm --prefix broken-access-control install && npm --prefix cryptographic-failures install && npm --prefix security-logging-failures install && npm --prefix injection install && npm --prefix insecure-design install && npm --prefix vulnerable-components install && npm --prefix security-misconfiguration install && npm --prefix software-data-integrity install && npm --prefix server-side-request-forgery install",
     "start": "concurrently \"npm --prefix broken-access-control start\" \"npm --prefix cryptographic-failures start\" \"npm --prefix security-logging-failures start\" \"npm --prefix injection start\" \"npm --prefix insecure-design start\" \"npm --prefix vulnerable-components start\" \"npm --prefix security-misconfiguration start\" \"npm --prefix software-data-integrity start\" \"npm --prefix server-side-request-forgery start\""
