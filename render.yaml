@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: xploitsim-frontend
+    env: node
+    rootDir: .
+    buildCommand: npm install && npm run build
+    startCommand: npm run preview
+    staticPublishPath: dist
+
+  - type: web
+    name: xploitsim-server
+    env: node
+    rootDir: server
+    buildCommand: npm install
+    startCommand: npm start
